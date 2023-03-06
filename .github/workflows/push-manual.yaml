@@ -10,7 +10,7 @@ env:
   TF_VERSION: 1.2.2
   TG_VERSION: 0.37.1
   TG_SRC_PATH: terraform
-  TFC_WORKSPACE: tools
+  TFC_WORKSPACE: dev
 
 permissions:
   id-token: write # This is required for requesting the JWT
@@ -71,8 +71,8 @@ jobs:
           tags: ${{ env.IMAGE_ID }}:${{ github.sha }}
 
   terraform_apply:
-    name: terraform apply Tools
-    environment: tools
+    name: terraform apply Dev
+    environment: dev
     runs-on: ubuntu-22.04
     needs: docker_push
 
