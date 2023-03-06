@@ -72,7 +72,7 @@ jobs:
 
   terraform_apply:
     name: terraform apply Dev
-    environment: test
+    environment: dev
     runs-on: ubuntu-22.04
     needs: docker_push
 
